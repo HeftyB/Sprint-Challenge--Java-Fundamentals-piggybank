@@ -116,29 +116,49 @@ public class CoinController
         double tempCount = amountToRemove;
 
         int dollarsToRemove = (int) amountToRemove;
+        if (dollarsToRemove > dollarQTY)
+        {
+            dollarsToRemove = dollarQTY;
+        }
         tempCount = tempCount - dollarsToRemove;
         dollarQTY = dollarQTY - dollarsToRemove;
 
         int quartersToRemove = (int) (tempCount * 100 )/ 25;
+        if (quartersToRemove > quarterQTY)
+        {
+            quartersToRemove = quarterQTY;
+        }
         quarterQTY = quarterQTY - quartersToRemove;
         tempCount = tempCount - (quartersToRemove * 0.25);
 
         int dimesToRemove = (int) (tempCount * 100) / 10;
+        if (dimesToRemove > dimeQTY)
+        {
+            dimesToRemove = dimeQTY;
+        }
         dimeQTY = dimeQTY - dimesToRemove;
         tempCount = tempCount - (dimesToRemove * 0.10);
 
         int nickelsToRemove = (int) (tempCount * 100) / 05;
+        if (nickelsToRemove > nickelQTY)
+        {
+            nickelsToRemove = nickelQTY;
+        }
         nickelQTY = nickelQTY - nickelsToRemove;
         tempCount = tempCount - (nickelsToRemove * 0.05);
 
         int penniesToRemove = (int) (tempCount * 100) / 1;
+        if (penniesToRemove > pennyQTY)
+        {
+            penniesToRemove = pennyQTY;
+        }
         pennyQTY = pennyQTY - penniesToRemove;
         tempCount = tempCount - (penniesToRemove * 0.01);
 
 
         piggyBankTotal = piggyBankTotal - amountToRemove;
 
-        return new ResponseEntity<>("Remaining coins: " + "Dollars: " + dollarQTY + "Quarters: " + quarterQTY + "Dimes: " + dimeQTY + "Nickels: " + nickelQTY + "Pennies: " + pennyQTY + "Totaling: " + piggyBankTotal, HttpStatus.OK);
+        return new ResponseEntity<>("Remaining coins: " + "Dollars: " + dollarQTY + " Quarters: " + quarterQTY + " Dimes: " + dimeQTY + " Nickels: " + nickelQTY + " Pennies: " + pennyQTY + " Totaling: " + piggyBankTotal, HttpStatus.OK);
 
     }
 }
