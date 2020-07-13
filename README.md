@@ -23,9 +23,38 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Explain how you took advantage of Java's Object Oriented approach to solve the sprint challenge.
+
+	The advantages I used all fall back on the 4 pillars of oop:
+	- Abstraction:
+			Everything is hidden from the user, the endpoint just works!
+	- Encapsulation
+			All fields are accessed through getters and setters, code is binded togther in proper fashion, whith state behavior in the same object. 
+	- Polymorphism
+			I took advantage of Java's repititve'ness to make the code is set up to beocme dynamic and very easy to add new features or method overloading.
+	- inheritance
+			All coins inherited their properties and methods from their parent class.
+
+
 2. Explain the three steps needed to run a Java application (using the JDK) including what each step does and how those step correlate to running a JavaScript application.
+
+	- Compile/Build 
+			 turns the code from human readable source code to software readable byte code to be read by the jvm
+	- Compress/Package/Archive
+			Combines all the needed files into a single archive file to be used
+	- Run/Execution
+			Launch the JVM and execute the program
+
 3. Explain how Java being a strongly typed language affected you solution.
+
+        with a strangly typed language I had to do a little bit more planning and abosolutley let ItelliJ handle all the imports to advoid any bugs.
+
 4. Can you explain the differences between Abstract Classes and Interfaces including how they are used in your application?
+
+        Abstract classes are going to be a whole object template that other classes can be implemented from while interfaces are used to define what behaviors/methods a class should have.
+        A class can extend a single abstract class and implement multiple interfaces.
+        The CoinRepository is an interface that extends from the CrudRepository abstract class
+        
+
 
 ## Instructions
 
